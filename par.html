@@ -28,7 +28,7 @@ margin:0px;
   font-family:'Cardo', serif;
   color:#e6ada2;
   font-size: 19px;
-  width: 12.5%;
+  width: 14.85%;
   text-align: center;
 }
 .navbar a.dk {
@@ -38,7 +38,7 @@ margin:0px;
   font-family:'Cardo', serif;
   color:#407a8f;
   font-size: 20px;
-  width: 12.5%;
+  width: 14.85%;
   text-align: center;
 }
 .navbar a.wh {
@@ -48,7 +48,7 @@ margin:0px;
   font-family:'Cardo', serif;
   color:#ffffff;
   font-size: 20px;
-  width: 12.5%;
+  width: 14.85%;
   text-align: center;
 }
 .navbar a:hover {
@@ -64,7 +64,7 @@ margin:0px;
 <a class="wh" href="rom.html"> Romantic</a> 
 <a class="dk" href="rap.html"> Rap</a>     
 <a class="dk" href="sad.html"> Sad</a>
-<a class="dk" href="#">About us</a></div>
+</div>
 <center><p>Chumma Kizhi</p>
 <audio controls>
   <source src="Chumma Kizhi.ogg" type="audio/ogg">
@@ -80,15 +80,25 @@ margin:0px;
   <source src="Marana Mass.ogg" type="audio/ogg">
   <source src="Marana Mass.mp3" type="audio/mpeg">
 </audio></center>
-<center><p>Red Cardu</p>
+<center><p>Kala Chashma</p>
 <audio controls>
-  <source src="Red Cardu.ogg" type="audio/ogg">
-  <source src="Red Cardu.mp3" type="audio/mpeg">
+  <source src="Kala Chashma.ogg" type="audio/ogg">
+  <source src="Kala Chashma.mp3" type="audio/mpeg">
 </audio></center>
 <center><p>Siriki</p>
 <audio controls>
   <source src="Siriki.ogg" type="audio/ogg">
   <source src="Siriki.mp3" type="audio/mpeg">
 </audio></center>
+<script>
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+</script>
 </body>
 </html>

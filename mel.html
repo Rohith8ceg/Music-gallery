@@ -28,27 +28,7 @@ margin:0px;
   font-family:'Cardo', serif;
   color:#e6ada2;
   font-size: 19px;
-  width: 12.5%;
-  text-align: center;
-}
-.navbar a.dk {
-  float: left;
-  padding: 12px;
-  text-decoration: none;
-  font-family:'Cardo', serif;
-  color:#407a8f;
-  font-size: 20px;
-  width: 12.5%;
-  text-align: center;
-}
-.navbar a.wh {
-  float: left;
-  padding: 12px;
-  text-decoration: none;
-  font-family:'Cardo', serif;
-  color:#ffffff;
-  font-size: 20px;
-  width: 12.5%;
+  width: 14.85%;
   text-align: center;
 }
 .navbar a:hover {
@@ -64,31 +44,41 @@ margin:0px;
 <a class="wh" href="rom.html"> Romantic</a> 
 <a class="dk" href="rap.html"> Rap</a>     
 <a class="dk" href="sad.html"> Sad</a>
-<a class="dk" href="#">About us</a></div>
+</div>
 <center><p>Anthimaalai Neram</p>
-<audio controls>
+<audio controls autoplay >
   <source src="Anthimaalai.ogg" type="audio/ogg">
   <source src="Anthimaalai.mp3" type="audio/mpeg">
 </audio></center>
 <center><p>Kannamma</p>
-<audio controls>
+<audio controls id="mp">
   <source src="Kannamma.ogg" type="audio/ogg">
   <source src="Kannamma.mp3" type="audio/mpeg">
 </audio></center>
-<center><p>Paisa note</p>
-<audio controls>
-  <source src="Paisa note.ogg" type="audio/ogg">
-  <source src="Paisa note.mp3" type="audio/mpeg">
+<center><p>Desaandhiri</p>
+<audio controls id="mp">
+  <source src="Desaandhiri.ogg" type="audio/ogg">
+  <source src="Desaandhiri.mp3" type="audio/mpeg">
 </audio></center>
-<center><p>Pudhu Metro Rail</p>
-<audio controls>
-  <source src="Pudhu Metro Rail.ogg" type="audio/ogg">
-  <source src="Pudhu Metro Rail.mp3" type="audio/mpeg">
+<center><p>Mudhal Mazhai</p>
+<audio controls id="mp">
+  <source src="Mudhal Mazhai.ogg" type="audio/ogg">
+  <source src="Mudhal Mazhai.mp3" type="audio/mpeg">
 </audio></center>
 <center><p>Thaarame Thaarame</p>
-<audio controls>
+<audio controls id="mp">
   <source src="Thaarame Thaarame.ogg" type="audio/ogg">
   <source src="Thaarame Thaarame.mp3" type="audio/mpeg">
 </audio></center>
+<script>
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+</script>
 </body>
 </html>
