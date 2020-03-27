@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Melody</title>
+<style>
+p{
+font-size: 20px;
+}
+body{
+background-image: url('https://images.unsplash.com/photo-1446057032654-9d8885db76c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80');
+background-repeat:no-repeat;
+ background-attachment: fixed;
+background-position:center;
+background-size:cover;
+margin:0px;
+padding-bottom:15px;
+}
+.navbar {
+  width:100%;
+  background-color:transparent;
+  overflow: auto;
+  }
+.navbar a {
+  float: left;
+  padding: 12px;
+  text-decoration: none;
+  font-family:'Cardo', serif;
+  color:#ffffff;
+  font-size: 19px;
+  width: 14.85%;
+  text-align: center;
+}
+.navbar a:hover {
+  color:#000000;
+  background-color:#fefefe;
+}
+h2,h4{
+text-align: center;
+color:#ffffff;
+}
+.ac,.aq{
+display: flex;
+justify-content: center;
+align-items: center 
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+<a href="../index.html">Home</a>   
+<a href="mel.html"> Melody</a> 
+<a href="../Party/par.html"> Party</a>  	 
+<a class="wh" href="../Romantic/rom.html"> Romantic</a> 
+<a class="dk" href="../Rap/rap.html"> Rap</a>     
+<a class="dk" href="../Sad/sad.html"> Sad</a>
+</div>
+<h2>Anthimaalai Neram</h2>
+<h4><em>Contributing Artist: Sid Sriram</em></h4>
+<div class="ac">
+<audio id="audioPlayer" controls autoplay >
+  <source src="Anthimaalai.ogg" type="audio/ogg">
+  <source src="Anthimaalai.mp3" type="audio/mpeg">
+</audio></div>
+<br/><div class="aq">
+<input type="button" value="Add to queue" onclick="at1()" /></div>
+<br/>
+<h2>Kannamma</h2>
+<h4><em>Contributing Artist: Sam C S, Anirudh </em></h4>
+<div class="ac">
+<audio controls >
+  <source src="Kannamma.ogg" type="audio/ogg">
+  <source src="Kannamma.mp3" type="audio/mpeg">
+</audio></div><br/>
+<div class="aq">
+<input type="button" value="Add to queue" onclick="at2()" /></div>
+<br/>
+<h2>Desaandhiri</h2>
+<h4><em>Contributing Artist: Siddharth, Santhosh Narayanan</em></h4>
+<div class="ac">
+<audio controls >
+  <source src="Desaandhiri.ogg" type="audio/ogg">
+  <source src="Desaandhiri.mp3" type="audio/mpeg">
+</audio></div><br/>
+<div class="aq">
+<input type="button" value="Add to queue" onclick="at3()" /></div>
+<br/>
+<h2>Mudhal Mazhai</h2>
+<h4><em>Contributing Artist: R. Prasanna, Hariharan</em></h4>
+<div class="ac">
+<audio controls >
+  <source src="MudhalMazhai.ogg" type="audio/ogg">
+  <source src="MudhalMazhai.mp3" type="audio/mpeg">
+</audio></div><br/>
+<div class="aq">
+<input type="button" value="Add to queue" onclick="at4()" /></div>
+<br/>
+<h2>Thaarame Thaarame</h2>
+<h4><em>Contributing Artist: Sid Sriram</em></h4>
+<div class="ac">
+<audio controls >
+  <source src="ThaarameThaarame.ogg" type="audio/ogg">
+  <source src="ThaarameThaarame.mp3" type="audio/mpeg">
+</audio></div>
+<br/>
+<div class="aq">
+<input type="button" value="Add to queue" onclick="at5()" /></div>
+<br/>
+<div class="aq">
+<input type="button" value="Queue List" onclick="ql()" /></div>
+<script>
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+t=[];
+function at1(){
+t.push("Anthimaalai");
+}
+function at2(){
+t.push("Kannamma");
+}
+function at3(){
+t.push("Desaandhiri");
+}
+function at4(){
+t.push("MudhalMazhai");
+}
+function at5(){
+t.push("ThaarameThaarame");
+}
+function ql(){
+for(i=0; i<t.length; i++){
+var audio = new Audio(t[i]+'.mp3');
+audio.play();
+}
+}
+</script>
+</body>
+</html>

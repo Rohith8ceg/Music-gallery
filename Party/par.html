@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Party</title>
+<style>
+p{
+font-size: 20px;
+color:white;
+}
+body{
+background-image: url('https://wallpapercave.com/wp/aV9gasM.jpg');
+background-repeat:no-repeat;
+ background-attachment: fixed;
+background-position:center;
+background-size:cover;
+margin:0px;
+padding-bottom:15px;
+}
+.navbar {
+  width:100%;
+  background-color:transparent;
+  overflow: auto;
+  }
+.navbar a {
+  float: left;
+  padding: 12px;
+  text-decoration: none;
+  font-family:'Cardo', serif;
+  color:#e6ada2;
+  font-size: 19px;
+  width: 14.85%;
+  text-align: center;
+}
+.navbar a.dk {
+  float: left;
+  padding: 12px;
+  text-decoration: none;
+  font-family:'Cardo', serif;
+  color:#407a8f;
+  font-size: 20px;
+  width: 14.85%;
+  text-align: center;
+}
+.navbar a:hover {
+  color:#000000;
+  background-color:#fefefe;
+}
+p{
+text-align: center;
+}
+h2,h4{
+text-align: center;
+color:#fafffb;
+}
+.ac{
+display: flex;
+justify-content: center;
+align-items: center 
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+<a href="../index.html">Home</a>   
+<a href="../Melody/mel.html"> Melody</a> 
+<a href="par.html"> Party</a>  	 
+<a class="dk" href="../Romantic/rom.html"> Romantic</a> 
+<a class="dk" href="../Rap/rap.html"> Rap</a>     
+<a class="dk" href="../Sad/sad.html"> Sad</a>
+</div>
+<h2>Chumma Kizhi</h2>
+<h4><em>Contributing Artist: S. P. Balasubrahmanyam</em></h4>
+<div class="ac">
+<audio controls>
+  <source src="ChummaKizhi.ogg" type="audio/ogg">
+  <source src="ChummaKizhi.mp3" type="audio/mpeg">
+</audio></div><br/>
+<h2>Kadhal Psycho</h2>
+<h4><em>Contributing Artist: Anirudh Ravichander, Dhvani Bhanushali</em></h4>
+<div class="ac">
+<audio controls>
+  <source src="KadhalPsycho.ogg" type="audio/ogg">
+  <source src="KadhalPsycho.mp3" type="audio/mpeg">
+</audio></div><br/>
+<h2>Marana Mass</h2>
+<h4><em>Contributing Artist: Anirudh Ravichander</em></h4>
+<div class="ac">
+<audio controls>
+  <source src="MaranaMass.ogg" type="audio/ogg">
+  <source src="MaranaMass.mp3" type="audio/mpeg">
+</audio></div><br/>
+<h2>Kala Chashma</h2>
+<h4><em>Contributing Artist: Badshah, Neha Kakkar</em></h4>
+<div class="ac">
+<audio controls>
+  <source src="KalaChashma.ogg" type="audio/ogg">
+  <source src="KalaChashma.mp3" type="audio/mpeg">
+</audio></div><br/>
+<h2>Siriki</h2>
+<h4><em>Contributing Artist: Senthil Ganesh, Ramani Ammal</em></h4>
+<div class="ac">
+<audio controls>
+  <source src="Siriki.ogg" type="audio/ogg">
+  <source src="Siriki.mp3" type="audio/mpeg">
+</audio></div>
+<script>
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+</script>
+</body>
+</html>

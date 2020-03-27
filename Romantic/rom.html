@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Romantic</title>
+<style>
+p{
+font-size: 20px;
+}
+body{
+background-image: url('https://www.jakpost.travel/wimages/large/219-2195102_red-and-white-heart-wallpaper-hd-wallpaper-red.jpg');
+background-repeat:no-repeat;
+ background-attachment: fixed;
+background-position:center;
+background-size:cover;
+margin:0px;
+padding-bottom:15px;
+}
+.navbar {
+  width:100%;
+  background-color:transparent;
+  overflow: auto;
+  }
+.navbar a {
+  float: left;
+  padding: 12px;
+  text-decoration: none;
+  font-family:'Cardo', serif;
+  color:#ffffff;
+  font-size: 19px;
+  width: 14.85%;
+  text-align: center;
+}
+.navbar a:hover {
+  color:#000000;
+  background-color:#ffffff;
+}
+p{
+text-align: center;
+}
+h2,h4{
+text-align: center;
+}
+.ac{
+display: flex;
+justify-content: center;
+align-items: center 
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+<a href="../index.html">Home</a>   
+<a href="../Melody/mel.html"> Melody</a> 
+<a href="../Party/par.html"> Party</a>  	 
+<a href="rom.html"> Romantic</a> 
+<a href="../Rap/rap.html"> Rap</a>     
+<a href="../Sad/sad.html"> Sad</a>
+</div>
+<h2>Anbae Peranbae</h2>
+<h4><em>Contributing Artist: Sid Sriram, Shreya Ghoshal</em></h4>
+<div class="ac">
+<audio controls>
+  <source src="AnbaePeranbae.ogg" type="audio/ogg">
+  <source src="AnbaePeranbae.mp3" type="audio/mpeg">
+</audio></div><br/>
+<h2>Jigidi Killaadi</h2>
+<h4><em>Contributing Artist: Anirudh Ravichander</em></h4>
+<div class="ac">
+<audio controls>
+  <source src="JigidiKillaadi.ogg" type="audio/ogg">
+  <source src="JigidiKillaadi.mp3" type="audio/mpeg">
+</audio></div><br/>
+<h2>Kanne Kanne</h2>
+<h4><em>Contributing Artist: Anirudh Ravichander, Sam CS</em></h4>
+<div class="ac">
+<audio controls>
+  <source src="KanneKanne.ogg" type="audio/ogg">
+  <source src="KanneKanne.mp3" type="audio/mpeg">
+</audio></div><br/>
+<h2>En Kadhal Solla </h2>
+<h4><em>Contributing Artist: Yuvan Shankar Raja & Tanvi Shah</em></h4>
+<div class="ac">
+<audio controls>
+  <source src="EnKadhalSolla.ogg" type="audio/ogg">
+  <source src="EnKadhalSolla.mp3" type="audio/mpeg">
+</audio></div><br/>
+<h2>Takkunu Takkunu</h2>
+<h4><em>Contributing Artist: Anirudh Ravichander</em></h4>
+<div class="ac">
+<audio controls>
+  <source src="TakkunuTakkunu.ogg" type="audio/ogg">
+  <source src="TakkunuTakkunu.mp3" type="audio/mpeg">
+</audio></div>
+<script>
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+</script>
+</body>
+</html>
