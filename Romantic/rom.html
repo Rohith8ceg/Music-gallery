@@ -6,14 +6,21 @@
 <title>Romantic</title>
 <style>
 p{
-font-size: 20px;
+color:#000000;
+text-align:center;
+font-size:20px;
+}
+.link{
+color:#000000;
+display: flex;
+justify-content: center;
+align-items: center ;
+font-size:20px;
+font-style: italic;
 }
 body{
-background-image: url('https://www.jakpost.travel/wimages/large/219-2195102_red-and-white-heart-wallpaper-hd-wallpaper-red.jpg');
-background-repeat:no-repeat;
- background-attachment: fixed;
-background-position:center;
-background-size:cover;
+background-image: url('rom.jpg');
+background-repeat:repeat;
 margin:0px;
 padding-bottom:15px;
 }
@@ -36,13 +43,10 @@ padding-bottom:15px;
   color:#000000;
   background-color:#ffffff;
 }
-p{
-text-align: center;
-}
 h2,h4{
 text-align: center;
 }
-.ac{
+.ac, .aq{
 display: flex;
 justify-content: center;
 align-items: center 
@@ -65,6 +69,9 @@ align-items: center
   <source src="AnbaePeranbae.ogg" type="audio/ogg">
   <source src="AnbaePeranbae.mp3" type="audio/mpeg">
 </audio></div><br/>
+<div class="aq">
+<input type="button" value="Add to Playlist" onclick="at('AnbaePeranbae')" /></div>
+<br/>
 <h2>Jigidi Killaadi</h2>
 <h4><em>Contributing Artist: Anirudh Ravichander</em></h4>
 <div class="ac">
@@ -72,6 +79,9 @@ align-items: center
   <source src="JigidiKillaadi.ogg" type="audio/ogg">
   <source src="JigidiKillaadi.mp3" type="audio/mpeg">
 </audio></div><br/>
+<div class="aq">
+<input type="button" value="Add to Playlist" onclick="at('JigidiKillaadi')" /></div>
+<br/>
 <h2>Kanne Kanne</h2>
 <h4><em>Contributing Artist: Anirudh Ravichander, Sam CS</em></h4>
 <div class="ac">
@@ -79,6 +89,9 @@ align-items: center
   <source src="KanneKanne.ogg" type="audio/ogg">
   <source src="KanneKanne.mp3" type="audio/mpeg">
 </audio></div><br/>
+<div class="aq">
+<input type="button" value="Add to Playlist" onclick="at('KanneKanne')" /></div>
+<br/>
 <h2>En Kadhal Solla </h2>
 <h4><em>Contributing Artist: Yuvan Shankar Raja & Tanvi Shah</em></h4>
 <div class="ac">
@@ -86,22 +99,24 @@ align-items: center
   <source src="EnKadhalSolla.ogg" type="audio/ogg">
   <source src="EnKadhalSolla.mp3" type="audio/mpeg">
 </audio></div><br/>
+<div class="aq">
+<input type="button" value="Add to Playlist" onclick="at('EnKadhalSolla')" /></div>
+<br/>
 <h2>Takkunu Takkunu</h2>
 <h4><em>Contributing Artist: Anirudh Ravichander</em></h4>
 <div class="ac">
 <audio controls>
   <source src="TakkunuTakkunu.ogg" type="audio/ogg">
   <source src="TakkunuTakkunu.mp3" type="audio/mpeg">
-</audio></div>
-<script>
-document.addEventListener('play', function(e){
-    var audios = document.getElementsByTagName('audio');
-    for(var i = 0, len = audios.length; i < len;i++){
-        if(audios[i] != e.target){
-            audios[i].pause();
-        }
-    }
-}, true);
+</audio></div><br/>
+<div class="aq">
+<input type="button" value="Add to Playlist" onclick="at('TakkunuTakkunu')" /></div>
+<br/>
+<div class="aq">
+<input type="button" value="Show playlist" onclick="pl()" /></div><br/>
+<p id="pl"></p>
+<a class="link" href="https://gaana.com/playlist/gaana-dj-top-tamil-love-songs">Check out more Romantic Songs</a><br/>
+<script src="../all.js">
 </script>
 </body>
 </html>

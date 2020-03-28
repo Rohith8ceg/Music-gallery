@@ -6,11 +6,20 @@
 <title>Party</title>
 <style>
 p{
-font-size: 20px;
-color:white;
+color:#ffffff;
+text-align:center;
+font-size:20px;
+}
+.link{
+color:#ffffff;
+display: flex;
+justify-content: center;
+align-items: center ;
+font-size:20px;
+font-style: italic;
 }
 body{
-background-image: url('https://wallpapercave.com/wp/aV9gasM.jpg');
+background-image: url('par.jpg');
 background-repeat:no-repeat;
  background-attachment: fixed;
 background-position:center;
@@ -47,14 +56,11 @@ padding-bottom:15px;
   color:#000000;
   background-color:#fefefe;
 }
-p{
-text-align: center;
-}
 h2,h4{
 text-align: center;
 color:#fafffb;
 }
-.ac{
+.ac,.aq{
 display: flex;
 justify-content: center;
 align-items: center 
@@ -77,6 +83,9 @@ align-items: center
   <source src="ChummaKizhi.ogg" type="audio/ogg">
   <source src="ChummaKizhi.mp3" type="audio/mpeg">
 </audio></div><br/>
+<div class="aq">
+<input type="button" value="Add to Playlist" onclick="at('ChummaKizhi')" /></div>
+<br/>
 <h2>Kadhal Psycho</h2>
 <h4><em>Contributing Artist: Anirudh Ravichander, Dhvani Bhanushali</em></h4>
 <div class="ac">
@@ -84,6 +93,9 @@ align-items: center
   <source src="KadhalPsycho.ogg" type="audio/ogg">
   <source src="KadhalPsycho.mp3" type="audio/mpeg">
 </audio></div><br/>
+<div class="aq">
+<input type="button" value="Add to Playlist" onclick="at('KadhalPsycho')" /></div>
+<br/>
 <h2>Marana Mass</h2>
 <h4><em>Contributing Artist: Anirudh Ravichander</em></h4>
 <div class="ac">
@@ -91,6 +103,9 @@ align-items: center
   <source src="MaranaMass.ogg" type="audio/ogg">
   <source src="MaranaMass.mp3" type="audio/mpeg">
 </audio></div><br/>
+<div class="aq">
+<input type="button" value="Add to Playlist" onclick="at('MaranaMass')" /></div>
+<br/>
 <h2>Kala Chashma</h2>
 <h4><em>Contributing Artist: Badshah, Neha Kakkar</em></h4>
 <div class="ac">
@@ -98,22 +113,24 @@ align-items: center
   <source src="KalaChashma.ogg" type="audio/ogg">
   <source src="KalaChashma.mp3" type="audio/mpeg">
 </audio></div><br/>
+<div class="aq">
+<input type="button" value="Add to Playlist" onclick="at('KalaChashma')" /></div>
+<br/>
 <h2>Siriki</h2>
 <h4><em>Contributing Artist: Senthil Ganesh, Ramani Ammal</em></h4>
 <div class="ac">
 <audio controls>
   <source src="Siriki.ogg" type="audio/ogg">
   <source src="Siriki.mp3" type="audio/mpeg">
-</audio></div>
-<script>
-document.addEventListener('play', function(e){
-    var audios = document.getElementsByTagName('audio');
-    for(var i = 0, len = audios.length; i < len;i++){
-        if(audios[i] != e.target){
-            audios[i].pause();
-        }
-    }
-}, true);
+</audio></div><br/>
+<div class="aq">
+<input type="button" value="Add to Playlist" onclick="at('Siriki')" /></div>
+<br/>
+<div class="aq">
+<input type="button" value="Show playlist" onclick="pl()" /></div><br/>
+<p id="pl"></p>
+<a class="link" href="https://gaana.com/playlist/gaana-dj-tamil-party-top-50">Check out more Party Songs</a><br/>
+<script src="../all.js">
 </script>
 </body>
 </html>

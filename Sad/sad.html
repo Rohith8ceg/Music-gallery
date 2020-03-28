@@ -6,10 +6,20 @@
 <title>Sad</title>
 <style>
 p{
-font-size: 20px;
+color:#000000;
+text-align:center;
+font-size:20px;
+}
+.link{
+color:#000000;
+display: flex;
+justify-content: center;
+align-items: center ;
+font-size:20px;
+font-style: italic;
 }
 body{
-background-image: url('https://cdn.pixabay.com/photo/2018/04/04/19/25/piano-3290798_960_720.jpg');
+background-image: url('sad.jpg');
 background-repeat:no-repeat;
  background-attachment: fixed;
 background-position:center;
@@ -36,13 +46,10 @@ padding-bottom:15px;
   color:#000000;
   background-color:#fefefe;
 }
-p{
-text-align: center;
-}
 h2,h4{
 text-align: center;
 }
-.ac{
+.ac, .aq{
 display: flex;
 justify-content: center;
 align-items: center 
@@ -65,6 +72,9 @@ align-items: center
   <source src="KannaiVittu.ogg" type="audio/ogg">
   <source src="KannaiVittu.mp3" type="audio/mpeg">
 </audio></div><br/>
+<div class="aq">
+<input type="button" value="Add to Playlist" onclick="at('KannaiVittu')" /></div>
+<br/>
 <h2>Usure</h2>
 <h4><em>Contributing Artist: Sudharshan Ashok, Jothi Pushpa</em></h4>
 <div class="ac">
@@ -72,6 +82,9 @@ align-items: center
   <source src="Usure.ogg" type="audio/ogg">
   <source src="Usure.mp3" type="audio/mpeg">
 </audio></div><br/>
+<div class="aq">
+<input type="button" value="Add to Playlist" onclick="at('Usure')" /></div>
+<br/>
 <h2>Marappadhilai Nenje</h2>
 <h4><em>Contributing Artist: Leon James, Sudharshan Ashok</em></h4>
 <div class="ac">
@@ -79,6 +92,9 @@ align-items: center
   <source src="MarappadhilaiNenje.ogg" type="audio/ogg">
   <source src="MarappadhilaiNenje.mp3" type="audio/mpeg">
 </audio></div><br/>
+<div class="aq">
+<input type="button" value="Add to Playlist" onclick="at('MarappadhilaiNenje')" /></div>
+<br/>
 <h2>Yamma Yamma</h2>
 <h4><em>Contributing Artist: S. P. Bala & Swetha Menon</em></h4>
 <div class="ac">
@@ -86,22 +102,23 @@ align-items: center
   <source src="YammaYamma.ogg" type="audio/ogg">
   <source src="YammaYamma.mp3" type="audio/mpeg">
 </audio></div><br/>
+<div class="aq">
+<input type="button" value="Add to Playlist" onclick="at('YammaYamma')" /></div>
+<br/>
 <h2>Ava Enna Enna</h2>
 <h4><em>Contributing Artist: Karthik & V.V.Prasanna</em></h4>
 <div class="ac">
 <audio controls>
   <source src="AvaEnnaEnna.ogg" type="audio/ogg">
   <source src="AvaEnnaEnna.mp3" type="audio/mpeg">
-</audio></div>
-<script>
-document.addEventListener('play', function(e){
-    var audios = document.getElementsByTagName('audio');
-    for(var i = 0, len = audios.length; i < len;i++){
-        if(audios[i] != e.target){
-            audios[i].pause();
-        }
-    }
-}, true);
+</audio></div><br/>
+<div class="aq">
+<input type="button" value="Add to Playlist" onclick="at('AvaEnnaEnna')" /></div>
+<br/><div class="aq">
+<input type="button" value="Show playlist" onclick="pl()" /></div><br/>
+<p id="pl"></p>
+<a class="link" href="https://gaana.com/playlist/nandanbabu-tamilsadsongs">Check out more Sad Songs</a><br/>
+<script src="../all.js">
 </script>
 </body>
 </html>

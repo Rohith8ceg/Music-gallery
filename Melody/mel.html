@@ -6,12 +6,22 @@
 <title>Melody</title>
 <style>
 p{
-font-size: 20px;
+color:#ffffff;
+text-align:center;
+font-size:20px;
+}
+.link{
+color:#ffffff;
+display: flex;
+justify-content: center;
+align-items: center ;
+font-size:20px;
+font-style: italic;
 }
 body{
-background-image: url('https://images.unsplash.com/photo-1446057032654-9d8885db76c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80');
+background-image: url('mel.jpg');
 background-repeat:no-repeat;
- background-attachment: fixed;
+background-attachment: fixed;
 background-position:center;
 background-size:cover;
 margin:0px;
@@ -43,7 +53,7 @@ color:#ffffff;
 .ac,.aq{
 display: flex;
 justify-content: center;
-align-items: center 
+align-items: center ;
 }
 </style>
 </head>
@@ -59,12 +69,12 @@ align-items: center
 <h2>Anthimaalai Neram</h2>
 <h4><em>Contributing Artist: Sid Sriram</em></h4>
 <div class="ac">
-<audio id="audioPlayer" controls autoplay >
+<audio controls>
   <source src="Anthimaalai.ogg" type="audio/ogg">
   <source src="Anthimaalai.mp3" type="audio/mpeg">
 </audio></div>
 <br/><div class="aq">
-<input type="button" value="Add to queue" onclick="at1()" /></div>
+<input type="button" value="Add to Playlist" onclick="at('Anthimaalai')" /></div>
 <br/>
 <h2>Kannamma</h2>
 <h4><em>Contributing Artist: Sam C S, Anirudh </em></h4>
@@ -74,7 +84,7 @@ align-items: center
   <source src="Kannamma.mp3" type="audio/mpeg">
 </audio></div><br/>
 <div class="aq">
-<input type="button" value="Add to queue" onclick="at2()" /></div>
+<input type="button" value="Add to Playlist" onclick="at('Kannamma')" /></div>
 <br/>
 <h2>Desaandhiri</h2>
 <h4><em>Contributing Artist: Siddharth, Santhosh Narayanan</em></h4>
@@ -84,7 +94,7 @@ align-items: center
   <source src="Desaandhiri.mp3" type="audio/mpeg">
 </audio></div><br/>
 <div class="aq">
-<input type="button" value="Add to queue" onclick="at3()" /></div>
+<input type="button" value="Add to Playlist" onclick="at('Desaandhiri')" /></div>
 <br/>
 <h2>Mudhal Mazhai</h2>
 <h4><em>Contributing Artist: R. Prasanna, Hariharan</em></h4>
@@ -94,7 +104,7 @@ align-items: center
   <source src="MudhalMazhai.mp3" type="audio/mpeg">
 </audio></div><br/>
 <div class="aq">
-<input type="button" value="Add to queue" onclick="at4()" /></div>
+<input type="button" value="Add to Playlist" onclick="at('MudhalMazhai')" /></div>
 <br/>
 <h2>Thaarame Thaarame</h2>
 <h4><em>Contributing Artist: Sid Sriram</em></h4>
@@ -105,41 +115,13 @@ align-items: center
 </audio></div>
 <br/>
 <div class="aq">
-<input type="button" value="Add to queue" onclick="at5()" /></div>
+<input type="button" value="Add to Playlist" onclick="at('ThaarameThaarame')" /></div>
 <br/>
 <div class="aq">
-<input type="button" value="Queue List" onclick="ql()" /></div>
-<script>
-document.addEventListener('play', function(e){
-    var audios = document.getElementsByTagName('audio');
-    for(var i = 0, len = audios.length; i < len;i++){
-        if(audios[i] != e.target){
-            audios[i].pause();
-        }
-    }
-}, true);
-t=[];
-function at1(){
-t.push("Anthimaalai");
-}
-function at2(){
-t.push("Kannamma");
-}
-function at3(){
-t.push("Desaandhiri");
-}
-function at4(){
-t.push("MudhalMazhai");
-}
-function at5(){
-t.push("ThaarameThaarame");
-}
-function ql(){
-for(i=0; i<t.length; i++){
-var audio = new Audio(t[i]+'.mp3');
-audio.play();
-}
-}
+<input type="button" value="Show playlist" onclick="pl()" /></div><br/>
+<p id="pl"></p>
+<a class="link" href="https://gaana.com/playlist/gaana-dj-fresh-tamil-melodies-1">Check out more Melody Songs</a><br/>
+<script src="../all.js">
 </script>
 </body>
 </html>
